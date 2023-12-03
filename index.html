@@ -67,6 +67,161 @@
                 margin: 10px 0;
             }
         }
+
+
+
+        .section#home {
+        background-image: url('Assets/academia_piano.jpeg');
+        background-attachment: fixed; /* Esto es clave para el efecto parallax */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #ffffff;
+        text-align: center;
+        padding: 100px 20px; /* Aumenta el relleno para hacer la sección más alta */
+    }
+
+        .section#home h2 {
+            font-size: 2.5em; /* Tamaño de fuente más grande para el título */
+            margin-bottom: 0.5em; /* Espacio debajo del título */
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Sombra de texto para mejorar la legibilidad */
+        }
+
+        .section#home p {
+            font-size: 1.5em; /* Tamaño de fuente más grande para el párrafo */
+            max-width: 800px; /* Ancho máximo del texto */
+            margin: auto; /* Centra el texto en la página */
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* Sombra de texto para mejorar la legibilidad */
+        }
+        .section#home .content-wrapper {
+        background-color: rgba(0, 0, 0, 0.5); /* Gris con transparencia */
+        border-radius: 10px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+        display: inline-block; /* Para ajustar el ancho al contenido */
+        margin: 20px;
+    }
+
+    .section#home h2, .section#home p {
+        color: #ffffff; /* Texto blanco para contraste */
+        margin: 0; /* Restablecer márgenes por defecto */
+    }
+
+
+
+
+
+
+
+
+
+
+    .section {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.text, .image {
+    flex: 1;
+}
+
+.text {
+    padding: 0 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Opcional: para bordes redondeados */
+}
+
+/* Asegúrate de que el diseño sea responsivo */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .image {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section#contact {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 280px; /* Asegura un ancho mínimo para el contenido de contacto */
+    margin-right: 20px; /* Espacio entre el texto y el mapa */
+}
+
+.map-container {
+    flex: 2; /* Permite que el mapa ocupe más espacio que el texto */
+    height: 400px; /* Altura del mapa */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-right: 0;
+        margin-bottom: 20px; /* Espacio debajo del texto antes del mapa en móviles */
+    }
+
+    .map-container {
+        width: 100%; /* El mapa ocupa todo el ancho en dispositivos móviles */
+        height: 300px; /* Altura ajustada para móviles */
+    }
+}
+
+/* Asegúrate de que el iframe del mapa ocupe todo el contenedor */
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
     </style>
 </head>
 <body>
@@ -83,24 +238,57 @@
 </nav>
 
 <div class="section" id="home">
-    <h2>Bienvenidos a Nuestras Clases de Piano</h2>
-    <p>Descubre la alegría de la música a través de nuestras clases de piano, diseñadas para todas las edades y niveles de habilidad.</p>
+    <div class="content-wrapper">
+        <h2>Bienvenidos a Nuestras Clases de Piano</h2>
+        <p>Descubre la alegría de la música a través de nuestras clases de piano, diseñadas para todas las edades y niveles de habilidad.</p>
+    </div>
 </div>
 
 <div class="section" id="about">
-    <h2>Acerca de la Instructora</h2>
-    <p>Con años de experiencia y una pasión por enseñar, nuestra instructora ofrece clases de piano atractivas y adaptadas a las necesidades de cada estudiante.</p>
+    <div class="container">
+        <h2>Acerca de la Instructora</h2>
+        <div class="content">
+            <div class="text">
+                <p>Larraitz Burgaleta Bajineta es una experimentada profesora de piano, con un enfoque personalizado que se adapta a cada alumno. Su pasión por la enseñanza y su sólida formación en el Conservatorio Superior de Música de San Sebastián, hacen de sus clases una experiencia única y enriquecedora.</p>
+            </div>
+            <div class="image">
+                <img src="Assets/e.jpeg" alt="Larraitz Burgaleta, Instructora de Piano">
+            </div>
+        </div>
+    </div>
 </div>
 
+
 <div class="section" id="classes">
-    <h2>Nuestras Clases</h2>
-    <p>Desde principiante hasta avanzado, nuestras clases están estructuradas para brindar educación de calidad en un ambiente divertido y de apoyo.</p>
+    <div class="container">
+        <h2>Nuestras Clases</h2>
+        <div class="content">
+            <div class="image">
+                <img src="Assets/foto_clase.jpeg" alt="Clases de Piano">
+            </div>
+            <div class="text">
+                <p>Desde principiante hasta avanzado, nuestras clases están estructuradas para brindar educación de calidad en un ambiente divertido y de apoyo. Explora diferentes géneros musicales y técnicas de interpretación en nuestras sesiones interactivas y estimulantes.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="section" id="contact">
-    <h2>Contáctanos</h2>
-    <p>¿Listo para comenzar tu viaje por el piano? Contáctanos para más información sobre nuestras clases y horarios.</p>
+    <h2>Contacto</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <p><strong>Teléfono:</strong> +34 123 456 789</p>
+            <p><strong>Correo Electrónico:</strong> info@larraitzpiano.com</p>
+            <p><strong>Dirección:</strong> Calle de la Armonía, 28012 Madrid, España</p>
+            <p><strong>Web:</strong> <a href="http://www.larraitzpiano.com">www.larraitzpiano.com</a></p>
+        </div>
+        <div class="map-container">
+            <!-- Insertar iframe de Google Maps aquí -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d872.2225974142598!2d-1.9676509349887708!3d43.322339486744625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51a568761c9bd3%3A0x6e1d10d1a65fd5ac!2sEscuela%20de%20Piano%20Larraitz%20Burgaleta!5e0!3m2!1ses!2suk!4v1701632263899!5m2!1ses!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
 </div>
+
 
 <footer>
     <p>&copy; 2023 Clases de Piano de Larraitz Burgaleta</p>
